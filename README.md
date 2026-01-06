@@ -7,6 +7,20 @@
 
 本工具支持从命令行调用，读取 Excel 文件（`.xlsx` 格式），对指定工作表（sheet）中某一列的地址文本进行地理编码（Geocoding），并自动将经纬度结果写回原文件的新列中。
 
+## 打包
+
+```bash
+pip install build
+python -m build
+
+...
+Successfully built geocoding_cli-1.0.0.tar.gz and geocoding_cli-1.0.0-py3-none-any.whl
+
+# 上传到 PyPI
+pip install twine
+
+```
+
 ## 安装
 
 ```bash

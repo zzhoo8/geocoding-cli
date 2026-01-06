@@ -37,7 +37,7 @@ setup(
     extras_require={
     },
     include_package_data=True,
-    keywords='ottawa',
-    url='https://www.chndata.com',
+    keywords='geocoding',
+    url='https://github.com/zzhoo8/geocoding-cli',
     zip_safe=False
 )
