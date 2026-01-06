@@ -60,6 +60,7 @@ def main():
     parser.add_argument("--key", "-k", required=True, help="百度地图 Web 服务 AK（Access Key）")
     parser.add_argument("--sheet", "-s", type=int, default=1, help="工作表序号（从1开始，默认为1）")
     parser.add_argument("--column", "-c", type=int, required=True, help="地址所在列号（从1开始，A=1, B=2...）")
+    parser.add_argument('--sleep', '-sl', type=float, default=0.2, help="请求间隔时间（秒）")
 
     args = parser.parse_args()
 
@@ -67,6 +68,7 @@ def main():
     key = args.key
     sheet_index = args.sheet
     col_index = args.column
+    _间隔时间 = args.sleep
 
     if not os.path.isfile(input_file):
         print(f"错误：文件 '{input_file}' 不存在。", file=sys.stderr)
@@ -123,7 +125,7 @@ def main():
                 success_count += 1
 
             # 百度 API 免费配额通常为 10万次/天，QPS <= 30，建议延时 ≥0.5s
-            time.sleep(0.2)
+            time.sleep(_间隔时间)
 
             pbar.update(n=1)
 
