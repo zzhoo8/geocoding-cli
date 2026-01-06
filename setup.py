@@ -13,7 +13,7 @@ with open(file='dependence/requirements.txt', mode='r', encoding='utf-8') as f:
 
 setup(
     name='geocoding-cli',
-    version='1.0.2',
+    version='1.0.3',
     author="zzhoo8",
     author_email='zzhoo8@gmail.com',
     description="将 Excel 中的地址列批量转换为经纬度（百度地图 API）",
