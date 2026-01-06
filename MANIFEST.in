@@ -2,9 +2,11 @@
 
 # include all files matching any of the listed patterns
 include dependence/requirements.txt
+include README.md
+include LICENSE
 
 # exclude all files matching any of the listed patterns
-exclude MANIFEST.in README.md Dockerfile
+exclude MANIFEST.in Dockerfile
 
 #recursive-include tests *
 recursive-exclude * __pycache__

@@ -18,6 +18,8 @@ Successfully built geocoding_cli-1.0.0.tar.gz and geocoding_cli-1.0.0-py3-none-a
 
 # 上传到 PyPI
 pip install twine
+twine upload dist/*
+# 输入pypi token
 
 ```
 
@@ -59,7 +61,7 @@ geocoding --key your_amap_api_key --sheet 1 --column 5 addresses.xlsx
 - 调用地理编码 API 获取经纬度；
 - 在原文件中新增两列（默认为“经度”和“纬度”）写入结果。
 
-> ⚠️ **注意**：工具会**直接修改原文件**，建议操作前备份 Excel 文件。
+> ⚠️ **注意**：工具会输出结果到到**原文件名_已加入经纬度.xlsx**，建议操作前备份 Excel 文件。
 
 ## 输出格式
 

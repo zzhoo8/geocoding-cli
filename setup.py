@@ -1,5 +1,6 @@
 """The setup script."""
 import re
+from pathlib import Path
 
 from setuptools import setup, find_packages
 
@@ -12,12 +13,12 @@ with open(file='dependence/requirements.txt', mode='r', encoding='utf-8') as f:
 
 setup(
     name='geocoding-cli',
-    version='1.0.0',
+    version='1.0.1',
     author="zzhoo8",
     author_email='zzhoo8@gmail.com',
     description="将 Excel 中的地址列批量转换为经纬度（百度地图 API）",
-    long_description='',
-    readme={"content-type": "text/markdown", "file": "README.md"},
+    long_description=(Path(__file__).parent / "README.md").read_text(encoding="utf-8"),
+    long_description_content_type="text/markdown",
     license="LicenseRef-Proprietary",
     license_files=["LICENSE"],
     python_requires='>=3.10',
