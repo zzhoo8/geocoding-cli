@@ -36,7 +36,7 @@ pip install geocoding-cli
 ### 命令行语法
 
 ```bash
-geocoding --key <API_KEY> --sheet <SHEET_INDEX> --column <COLUMN_INDEX> <INPUT_FILE.xlsx>
+geocoding-cli --key <API_KEY> --sheet <SHEET_INDEX> --column <COLUMN_INDEX> <INPUT_FILE.xlsx>
 ```
 
 ### 参数说明
@@ -51,7 +51,7 @@ geocoding --key <API_KEY> --sheet <SHEET_INDEX> --column <COLUMN_INDEX> <INPUT_F
 ### 示例
 
 ```bash
-geocoding --key your_amap_api_key --sheet 1 --column 5 addresses.xlsx
+geocoding-cli --key your_amap_api_key --sheet 1 --column 5 addresses.xlsx
 ```
 
 该命令将：
