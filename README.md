@@ -1,5 +1,6 @@
 # 地理编码工具 (geocoding-cli)
 
+> 处理鸟类观测数据时，用到的工具，顺便放出。
 > 将 Excel 文件中指定工作表的某一列地址批量转换为经纬度坐标。
 > 使用百度地图api
 
@@ -7,29 +8,13 @@
 
 本工具支持从命令行调用，读取 Excel 文件（`.xlsx` 格式），对指定工作表（sheet）中某一列的地址文本进行地理编码（Geocoding），并自动将经纬度结果写回原文件的新列中。
 
-## 打包
-
-```bash
-pip install build
-python -m build
-
-...
-Successfully built geocoding_cli-1.0.0.tar.gz and geocoding_cli-1.0.0-py3-none-any.whl
-
-# 上传到 PyPI
-pip install twine
-twine upload dist/*
-# 输入pypi token
-
-```
-
 ## 安装
 
 ```bash
 pip install geocoding-cli
 ```
 
-> 注意：本工具依赖于网络请求调用地理编码 API（如高德、百度、Google 等），需提供有效的 API 密钥。
+> 注意：本工具依赖于网络请求调用地理编码 API（如百度、高德、Google 等），需提供有效的 API 密钥。
 
 ## 使用方法
 
@@ -74,13 +59,27 @@ geocoding-cli --key your_amap_api_key --sheet 1 --column 5 addresses.xlsx
 
 ## 支持的地理编码服务
 
-当前默认使用 **高德地图地理编码 API**。如需支持其他服务（如百度地图、Google Maps），请在 `--service` 参数中指定（未来版本支持）。
+当前默认使用 **百度地图地理编码 API**。如需支持其他服务（如百度地图、Google Maps），请在 `--service` 参数中指定（未来版本支持）。
 
 ## 依赖
 
-- Python 3.10+
-- `openpyxl`
-- `requests`
+见`requirements.txt`
+
+## 发布 
+
+```bash
+pip install build
+python -m build
+
+...
+Successfully built geocoding_cli-1.0.0.tar.gz and geocoding_cli-1.0.0-py3-none-any.whl
+
+# 上传到 PyPI
+pip install twine
+twine upload dist/*
+# 输入pypi token
+
+```
 
 ## 许可证
 
